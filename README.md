@@ -3,7 +3,7 @@ Para Usar Apenas Baixar O Autoinstall.yaml
 E A iso Do Ubuntu Minimal e adicionar a pasta
 nocloud Na e dentro dela um arquivo vazio
 chamado meta-data e o arquivo 
-autoinstall.yaml ISO usando a 
+autoinstall.yaml na ISO usando a 
 ferramenta de Sua Preferência ele instala o 
 kde e alguns apps o nome de usuário é admin e
 a senha é admin um aviso se vocês quiserem 
