@@ -1,0 +1,41 @@
+# autoinstall.yaml
+version: 1
+identity:
+  hostname: ubuntu-minimal
+  username: admin
+  password: "5myGxTI8svpgc"
+locale: pt_BR.UTF-8
+keyboard:
+  layout: br
+network:
+  version: 2
+  ethernets:
+    eth0:
+      dhcp4: true
+storage:
+  layout:
+    name: direct
+ssh:
+  install-server: true
+  allow-pw: true
+packages:
+  - openssh-client
+  - wget
+  - flatpak
+  - plasma-desktop
+late-commands:
+  # Adiciona o repositório Flathub
+  - flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+  # Instala o Google Chrome
+  - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -O /target/root/chrome.deb
+  - chroot /target dpkg -i /root/chrome.deb || true
+  - chroot /target apt-get install -f -y
+
+  # Instala aplicativos via Flatpak
+  - flatpak install -y flathub org.gimp.GIMP
+  - flatpak install -y flathub org.videolan.VLC
+
+  # Configura o KDE Plasma como ambiente padrão
+  - echo "exec startkde" > /target/home/admin/.xinitrc
+  - chown admin:admin /target/home/admin/.xinitrc
