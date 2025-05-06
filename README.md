@@ -17,4 +17,5 @@ Tiver Conenctado o Cabo Ethernet Quando Ligou
 O pendrive bootavel Você Pode Usar a ISO 
 Padrão sem botar o arquivo e no instalador 
 usar o comando
-```bash ubuntu-autoinstall ds=nocloud-net;s=https://raw.githubusercontent.com/pedrodev2025/Auto-Install-Ubuntu-Minimal/refs/heads/main/autoinstall.yaml```
+```bash
+ubuntu-autoinstall ds=nocloud-net;s=https://raw.githubusercontent.com/pedrodev2025/Auto-Install-Ubuntu-Minimal/refs/heads/main/autoinstall.yaml```
