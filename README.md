@@ -10,8 +10,8 @@ a senha é admin um aviso se vocês quiserem
 alterar a senha vocês tem que deixar de um 
 jeito encryptado pra gerar de forma encryptada
 é só dar o comando 
-bash mkpasswd (Senha Que Você Quer)
-alterando Senha Que Você Quer pra senha que
+ mkpasswd (Senha Que Você Quer)
+ alterando Senha Que Você Quer pra senha que
 Você Quer ele se instala sozinho se você 
 Tiver Conenctado o Cabo Ethernet Quando Ligou 
 O pendrive bootavel Você Pode Usar a ISO 
